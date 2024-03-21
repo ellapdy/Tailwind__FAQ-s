@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply max-w-[90rem] p-6 w-full mx-auto;
+}
+
+@layer components{
+    /* About */
+    /* Footer */
+   .footer{
+    @apply bg-lgrey py-8;
+   }
+   .footer__wrapper{
+    @apply lg:flex lg:justify-between;
+   }
+   .footer .footer__links{
+    @apply hidden lg:grid lg:grid-cols-3 lg:gap-4;
+   }
+   .footer__bottom{
+    @apply border-t-2 border-t-dgrey;
+   }
+   .footer__img{
+    @apply mb-4;
+   }
+   .footer__btn{
+    @apply text-center pb-14 lg:grid lg:grid-rows-2;
+   }
+   .footer__btn ul{
+    @apply mb-4 lg:mb-[0rem];
+   }
+   .footer__bottom{
+    @apply pt-10 pb-4 text-center;
+   }
+   .footer__bottom__wrapper{
+    @apply lg:flex lg:justify-between;
+   }
+   .footer__bottom ul{
+    @apply pb-4 justify-center;
+   }
+   .footer__bottom ul:first-child{
+    @apply flex gap-3 md:order-last;
+   }
+   .footer__bottom ul:last-child{
+    @apply md:order-first;
+   }
+   .footer__bottom ul:first-child i{
+    @apply text-[2rem] text-dgrey;
+   }
+}
+
+@layer utilities{
+    .btn{
+        @apply inline-block py-[.5rem] px-[4rem] rounded-md border-transparent border-[1.5px] 
+        text-lg font-normal;
+    }
+    .btn.bg--ygreen{
+        @apply bg-ygreen text-light hover:bg-dyellow;
+    }
+    .btn.bg--transparent{
+        @apply bg-transparent border-ygreen hover:bg-dyellow;
+    }
+}
